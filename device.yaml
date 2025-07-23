@@ -1,0 +1,16 @@
+# this is a simple test device setup that's used to compile and test the examples
+esphome:
+  name: pcf8591
+  build_path: build/pcf8591
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+logger:
+external_components:
+  - source:
+      type: local
+      path: components
+    components:
+      - pcf8591
+    refresh: always
